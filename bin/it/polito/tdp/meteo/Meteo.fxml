@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.meteo.MeteoController">
+  <!-- TODO Add Nodes -->
+  <center>
+    <VBox prefHeight="-1.0" prefWidth="-1.0" spacing="15.0">
+      <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+          <children>
+            <Label text="Mese" />
+            <ChoiceBox fx:id="boxMese">
+            </ChoiceBox>
+            <Button id="btnCerca" fx:id="btnUmidita" mnemonicParsing="false" onAction="#doCalcolaUmidita" text="Umidità" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+          <children>
+            <Label text="Sequenza ottimale delle città" />
+            <Button fx:id="btnCalcola" mnemonicParsing="false" onAction="#doCalcolaSequenza" text="Calcola" />
+          </children>
+        </HBox>
+        <TextArea fx:id="txtResult" disable="false" editable="false" prefWidth="-1.0" wrapText="true" />
+      </children>
+      <BorderPane.margin>
+        <Insets bottom="5.0" left="5.0" right="5.0" />
+      </BorderPane.margin>
+    </VBox>
+  </center>
+  <top>
+    <Label alignment="CENTER" contentDisplay="CENTER" text="Meteo - Laboratorio 06" textFill="#ee0404" BorderPane.alignment="CENTER">
+      <BorderPane.margin>
+        <Insets bottom="20.0" />
+      </BorderPane.margin>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+    </Label>
+  </top>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</BorderPane>
